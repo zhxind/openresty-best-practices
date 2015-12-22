@@ -141,11 +141,8 @@ http {
 local _M = {}
 
 -- 对输入参数逐个进行校验，只要有一个不是数字类型，则返回 false
-function _M.is_number(n, ...)
+function _M.is_number(...)
     local arg = {...}
-    if n ~= #arg then
-        return false
-    end
 
     local num
     for _,v in ipairs(arg) do
